@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Chat Bot</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <script>
+    
+    if (localStorage.getItem('loggedIn') !== 'true') {
+      window.location.href = 'login.html';
+    }
+  </script>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <i class="fas fa-robot"></i>
+        <h2>Health Bot</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="nav-item active"><i class="fas fa-comment-dots"></i> Chat</a></li>
+          <li><a href="#" class="nav-item"><i class="fas fa-user-md"></i> Providers</a></li>
+          <li><a href="#" class="nav-item"><i class="fas fa-stethoscope"></i> Symptom Checker</a></li>
+          <li><a href="#" class="nav-item"><i class="fas fa-prescription-bottle-alt"></i> Prescriptions</a></li>
+          <li><a href="#" class="nav-item"><i class="fas fa-notes-medical"></i> Health History</a></li>
+          <li><a href="#" class="nav-item"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <p>&copy; 2023 Health Chat Bot</p>
+        <button id="logout-button" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <h1>Welcome to Health Chat Bot!</h1>
+        <div class="user-profile">
+          <i class="fas fa-user-circle"></i>
+          <span>Patient Name</span>
+        </div>
+      </header>
+
+      <div class="chat-area">
+        <div class="chat-messages" id="chat-messages">
+          
+        </div>
+        <div class="chat-input-area">
+          <input type="text" id="user-input" placeholder="Type your message here...">
+          <button id="send-button"><i class="fas fa-paper-plane"></i> Send</button>
+        </div>
+      </div>
+
+      <div class="feature-cards-section">
+        <h2>Quick Access Features</h2>
+        <div class="feature-cards">
+          <div class="feature-card">
+            <i class="fas fa-user-check"></i>
+            <h3>Verified Providers</h3>
+            <p>Find trusted healthcare professionals.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-diagnoses"></i>
+            <h3>Symptom Checker</h3>
+            <p>Get AI-powered triage and advice.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-file-prescription"></i>
+            <h3>Secure Prescriptions</h3>
+            <p>Manage and receive e-prescriptions.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-history"></i>
+            <h3>Health History</h3>
+            <p>Keep a comprehensive record of your health.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
